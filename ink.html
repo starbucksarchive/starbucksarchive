@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>starbucks archive.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0a09;
+    color: #e8e1d8;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    animation: appear 1.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.small {
+    color: #777067;
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 10vw, 85px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 55px;
+}
+
+.links {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    border-top: 1px solid #35302b;
+}
+
+.links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 5px;
+    color: #c8bfb3;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #35302b;
+    transition: all .35s ease;
+}
+
+.links a:hover {
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.arrow {
+    color: #82766a;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 75px;
+    color: #514b44;
+    font-size: 9px;
+    letter-spacing: 4px;
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="container">
+
+    <div class="small">✦ PERSONAL COLLECTION ✦</div>
+
+    <h1>starbucks archive.</h1>
+
+    <div class="links">
+
+        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span>PINTEREST</span>
+            <span class="arrow">↗</span>
+        </a>
+
+        <a href="https://open.spotify.com/user/31p5i6wapnrcqpnyqt7fqp3d5xmy"
+           target="_blank"
+           rel="noopener noreferrer">
+            <span>SPOTIFY</span>
+            <span class="arrow">↗</span>
+        </a>
+
+    </div>
+
+    <footer>2026 · PRIVATE SPACE</footer>
+
+</main>
+
+</body>
+</html>
