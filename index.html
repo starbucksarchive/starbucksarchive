@@ -21,11 +21,11 @@
 body {
     min-height: 100vh;
     background: #0b0a09;
-    color: #e8e1d8;
+    color: #c8bfb3;
     font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
-    padding: 35px 20px;
+    padding: 55px 20px;
 }
 
 .container {
@@ -46,21 +46,31 @@ body {
     }
 }
 
-/* MAIN TEXT */
+/* INTRODUCTION */
 
 .small {
-    color: #777067;
+    color: #82766a;
     font-size: 10px;
-    letter-spacing: 5px;
-    margin-bottom: 35px;
+    letter-spacing: 4px;
+    margin-bottom: 28px;
 }
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 10vw, 85px);
+    font-size: clamp(48px, 10vw, 82px);
     font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 55px;
+    letter-spacing: 1px;
+    color: #c8bfb3;
+    margin-bottom: 45px;
+}
+
+/* SECTION HEADINGS */
+
+.section-label {
+    color: #82766a;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
 }
 
 /* SOCIAL LINKS */
@@ -68,7 +78,7 @@ h1 {
 .links {
     width: 100%;
     max-width: 360px;
-    margin: auto;
+    margin: 0 auto;
     border-top: 1px solid #35302b;
 }
 
@@ -76,10 +86,10 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 23px 5px;
+    padding: 22px 8px;
     color: #c8bfb3;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 3px;
     border-bottom: 1px solid #35302b;
     transition: all .35s ease;
@@ -93,10 +103,10 @@ h1 {
 
 .arrow {
     color: #82766a;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-/* FAVOURITE SONGS */
+/* PLAYLIST SECTION */
 
 .playlist-section {
     margin: 65px auto 0;
@@ -104,28 +114,36 @@ h1 {
     max-width: 360px;
 }
 
-.playlist-section .small {
-    margin-bottom: 25px;
+.playlist-section .section-label {
+    margin-bottom: 22px;
+}
+
+.playlist-box {
+    background: #151310;
+    border: 1px solid #35302b;
+    border-radius: 12px;
+    padding: 8px;
 }
 
 .spotify-players {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .spotify-players iframe {
+    display: block;
     width: 100%;
     height: 352px;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 75px;
-    color: #514b44;
+    margin-top: 70px;
+    color: #62594f;
     font-size: 9px;
     letter-spacing: 4px;
 }
@@ -133,13 +151,23 @@ footer {
 /* MOBILE */
 
 @media (max-width: 480px) {
+
     body {
-        padding: 35px 18px;
+        padding: 45px 18px;
     }
 
     h1 {
-        margin-bottom: 45px;
+        margin-bottom: 38px;
     }
+
+    .playlist-section {
+        margin-top: 55px;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+
 }
 
 </style>
@@ -149,7 +177,7 @@ footer {
 
 <main class="container">
 
-    <!-- MAIN TITLE -->
+    <!-- INTRODUCTION -->
 
     <div class="small">
         ✦ PERSONAL COLLECTION ✦
@@ -157,43 +185,57 @@ footer {
 
     <h1>starbucks archive.</h1>
 
+
     <!-- SOCIAL LINKS -->
 
-    <div class="links">
+    <section class="social-section">
 
-        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span>PINTEREST</span>
-            <span class="arrow">↗</span>
-
-        </a>
-
-    </div>
-
-    <!-- FULL SPOTIFY PLAYLIST -->
-
-    <section class="playlist-section">
-
-        <div class="small">
-            ✦ SONGS ON REPEAT ✦
+        <div class="section-label">
+            ✦ FIND ME ELSEWHERE ✦
         </div>
 
-        <div class="spotify-players">
+        <div class="links">
 
-            <iframe
-                src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?theme=0"
-                width="100%"
-                height="352"
-                frameborder="0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-            </iframe>
+            <a href="https://in.pinterest.com/dioraesthetic/_profile/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span>PINTEREST</span>
+                <span class="arrow">↗</span>
+
+            </a>
 
         </div>
 
     </section>
+
+
+    <!-- FAVOURITE SONGS -->
+
+    <section class="playlist-section">
+
+        <div class="section-label">
+            ✦ SONGS ON REPEAT ✦
+        </div>
+
+        <div class="playlist-box">
+
+            <div class="spotify-players">
+
+                <iframe
+                    src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?theme=0"
+                    width="100%"
+                    height="352"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <!-- FOOTER -->
 
