@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>starbucks archive.</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
-
-<style>
-
 /* GENERAL */
 
 * {
@@ -25,12 +13,12 @@ body {
     font-family: 'DM Sans', sans-serif;
     display: flex;
     justify-content: center;
-    padding: 55px 20px;
+    padding: 65px 22px;
 }
 
 .container {
     width: 100%;
-    max-width: 700px;
+    max-width: 760px;
     text-align: center;
     animation: appear 1.2s ease;
 }
@@ -50,34 +38,34 @@ body {
 
 .small {
     color: #82766a;
-    font-size: 10px;
-    letter-spacing: 4px;
-    margin-bottom: 28px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
 }
 
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 10vw, 82px);
+    font-size: clamp(58px, 11vw, 100px);
     font-weight: 300;
     letter-spacing: 1px;
     color: #c8bfb3;
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 
 /* SECTION HEADINGS */
 
 .section-label {
     color: #82766a;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 4px;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 /* SOCIAL LINKS */
 
 .links {
     width: 100%;
-    max-width: 360px;
+    max-width: 430px;
     margin: 0 auto;
     border-top: 1px solid #35302b;
 }
@@ -86,49 +74,49 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8px;
+    padding: 27px 12px;
     color: #c8bfb3;
     text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-size: 14px;
+    letter-spacing: 4px;
     border-bottom: 1px solid #35302b;
     transition: all .35s ease;
 }
 
 .links a:hover {
     color: #c8bfb3;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 22px;
+    padding-right: 22px;
 }
 
 .arrow {
     color: #82766a;
-    font-size: 15px;
+    font-size: 19px;
 }
 
 /* PLAYLIST SECTION */
 
 .playlist-section {
-    margin: 65px auto 0;
+    margin: 75px auto 0;
     width: 100%;
-    max-width: 360px;
+    max-width: 430px;
 }
 
 .playlist-section .section-label {
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 }
 
 .playlist-box {
     background: #151310;
     border: 1px solid #35302b;
-    border-radius: 12px;
-    padding: 8px;
+    border-radius: 14px;
+    padding: 10px;
 }
 
 .spotify-players {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
 }
 
 .spotify-players iframe {
@@ -136,15 +124,15 @@ h1 {
     width: 100%;
     height: 352px;
     border: none;
-    border-radius: 8px;
+    border-radius: 9px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 70px;
+    margin-top: 85px;
     color: #62594f;
-    font-size: 9px;
+    font-size: 11px;
     letter-spacing: 4px;
 }
 
@@ -153,97 +141,29 @@ footer {
 @media (max-width: 480px) {
 
     body {
-        padding: 45px 18px;
+        padding: 55px 20px;
     }
 
     h1 {
-        margin-bottom: 38px;
+        font-size: clamp(52px, 12vw, 72px);
+        margin-bottom: 48px;
+    }
+
+    .small {
+        font-size: 11px;
+    }
+
+    .links a {
+        padding: 24px 10px;
+        font-size: 13px;
     }
 
     .playlist-section {
-        margin-top: 55px;
-    }
-
-    footer {
         margin-top: 60px;
     }
 
+    footer {
+        margin-top: 70px;
+    }
+
 }
-
-</style>
-</head>
-
-<body>
-
-<main class="container">
-
-    <!-- INTRODUCTION -->
-
-    <div class="small">
-        ✦ PERSONAL COLLECTION ✦
-    </div>
-
-    <h1>starbucks archive.</h1>
-
-
-    <!-- SOCIAL LINKS -->
-
-    <section class="social-section">
-
-        <div class="section-label">
-            ✦ FIND ME ELSEWHERE ✦
-        </div>
-
-        <div class="links">
-
-            <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <span>PINTEREST</span>
-                <span class="arrow">↗</span>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- FAVOURITE SONGS -->
-
-    <section class="playlist-section">
-
-        <div class="section-label">
-            ✦ SONGS ON REPEAT ✦
-        </div>
-
-        <div class="playlist-box">
-
-            <div class="spotify-players">
-
-                <iframe
-                    src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?theme=0"
-                    width="100%"
-                    height="352"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-                </iframe>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-        2026 · PRIVATE SPACE
-    </footer>
-
-</main>
-
-</body>
-</html>
