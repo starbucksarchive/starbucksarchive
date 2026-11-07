@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,238 +10,226 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
+/* GENERAL */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    min-height: 100vh;
-    background: #0b0a09;
-    color: #e8e1d8;
-    font-family: 'DM Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 35px 20px;
+  min-height: 100vh;
+  background: #0b0a09;
+  color: #e8e1d8;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 35px 20px;
 }
 
 .container {
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-    animation: appear 1.2s ease;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  animation: appear 1.2s ease;
 }
 
 @keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* TEXT */
+
 .small {
-    color: #777067;
-    font-size: 10px;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
+  color: #777067;
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-bottom: 35px;
 }
 
 h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 10vw, 85px);
-    font-weight: 300;
-    letter-spacing: 2px;
-    margin-bottom: 55px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 10vw, 85px);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 55px;
 }
 
 /* SOCIAL LINKS */
 
 .links {
-    width: 100%;
-    max-width: 360px;
-    margin: auto;
-    border-top: 1px solid #35302b;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+  border-top: 1px solid #35302b;
 }
 
 .links a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 23px 5px;
-    color: #c8bfb3;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 3px;
-    border-bottom: 1px solid #35302b;
-    transition: .35s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 5px;
+  color: #c8bfb3;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #35302b;
+  transition: all .35s ease;
 }
 
 .links a:hover {
-    color: white;
-    padding-left: 15px;
-    padding-right: 15px;
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .arrow {
-    color: #82766a;
-    font-size: 16px;
+  color: #82766a;
+  font-size: 16px;
 }
 
-/* MUSIC */
+/* MUSIC SECTION */
 
 .playlist-section {
-    margin: 65px auto 0;
-    width: 100%;
-    max-width: 360px;
+  margin: 65px auto 0;
+  width: 100%;
+  max-width: 360px;
+}
+
+.playlist-section .small {
+  margin-bottom: 25px;
 }
 
 .spotify-players {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .spotify-players iframe {
-    width: 100%;
-    height: 152px;
-    border: none;
-    border-radius: 12px;
+  width: 100%;
+  height: 152px;
+  border: none;
+  border-radius: 12px;
 }
 
-/* TRAVEL */
+/* TRAVEL SECTION */
 
 .travel-section {
-    width: 100%;
-    max-width: 600px;
-    margin: 85px auto 0;
+  width: 100%;
+  max-width: 600px;
+  margin: 85px auto 0;
+}
+
+.travel-section .small {
+  margin-bottom: 18px;
 }
 
 .travel-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 7vw, 42px);
-    font-weight: 300;
-    margin-bottom: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 7vw, 42px);
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .travel-caption {
-    color: #777067;
-    font-size: 10px;
-    letter-spacing: 2px;
+  color: #777067;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
-/* FIXED 2D MAP */
+/* FLAT 2D WORLD MAP */
 
-.world-map {
-    width: 100%;
-    margin: 35px auto 15px;
-    overflow: hidden;
+.flat-map {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 35px auto 15px;
+  overflow: hidden;
 }
 
-.world-map svg {
-    width: 100%;
-    height: auto;
-    display: block;
+.flat-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  filter: grayscale(1) brightness(0.75);
+  pointer-events: none;
+  user-select: none;
 }
 
-.land {
-    fill: #292622;
-    stroke: #494139;
-    stroke-width: 1.2;
-    stroke-linejoin: round;
-}
-
-.graticule {
-    fill: none;
-    stroke: #24211e;
-    stroke-width: 1;
-}
+/* LOCATION DOTS */
 
 .map-dot {
-    fill: #dfc49d;
-    stroke: #0b0a09;
-    stroke-width: 2;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #c8b08a;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 7px rgba(200,176,138,0.4);
+  pointer-events: none;
 }
 
-.home-dot {
-    fill: #f0d7ad;
-    stroke: #0b0a09;
-    stroke-width: 2;
+/* RIYADH GOLD DOT */
+
+.map-dot.riyadh {
+  width: 10px;
+  height: 10px;
+  background: #e5bd78;
+  box-shadow: 0 0 12px rgba(229,189,120,0.8);
 }
 
-.map-label {
-    fill: #e8e1d8;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 11px;
-    letter-spacing: 1px;
-}
+/* MAP LEGEND */
 
-.home-label {
-    fill: #e5c89d;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-.leader {
-    stroke: #9b866b;
-    stroke-width: 1;
-    fill: none;
-}
-
-.map-legend {
-    color: #777067;
-    font-size: 9px;
-    letter-spacing: 3px;
-    margin: 20px 0 30px;
-}
-
-/* DESTINATIONS */
-
-.travel-list {
-    max-width: 400px;
-    width: 100%;
-    margin: 30px auto 0;
-    border-top: 1px solid #35302b;
-    text-align: left;
-}
-
-.travel-list div {
-    padding: 17px 5px;
-    border-bottom: 1px solid #35302b;
-    color: #c8bfb3;
-    font-size: 9px;
-    letter-spacing: 2px;
-    line-height: 1.8;
+.map-hint {
+  color: #777067;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin: 20px 0 30px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 75px;
-    color: #514b44;
-    font-size: 9px;
-    letter-spacing: 4px;
+  margin-top: 75px;
+  color: #514b44;
+  font-size: 9px;
+  letter-spacing: 4px;
 }
+
+/* MOBILE */
 
 @media (max-width: 480px) {
-    .map-label {
-        font-size: 13px;
-    }
+  body {
+    padding: 35px 18px;
+  }
 
-    .home-label {
-        font-size: 14px;
-    }
+  .flat-map {
+    margin-top: 30px;
+  }
 
-    .travel-section {
-        margin-top: 65px;
-    }
+  .map-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .map-dot.riyadh {
+    width: 9px;
+    height: 9px;
+  }
 }
+
 </style>
 </head>
 
@@ -248,277 +237,153 @@ footer {
 
 <main class="container">
 
-    <!-- HEADER -->
+  <!-- MAIN TITLE -->
 
-    <div class="small">✦ PERSONAL COLLECTION ✦</div>
+  <div class="small">
+    ✦ PERSONAL COLLECTION ✦
+  </div>
 
-    <h1>starbucks archive.</h1>
+  <h1>starbucks archive.</h1>
 
-    <!-- SOCIAL LINKS -->
+  <!-- SOCIAL LINKS -->
 
-    <div class="links">
+  <div class="links">
 
-        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-           target="_blank" rel="noopener noreferrer">
-            <span>PINTEREST</span>
-            <span class="arrow">↗</span>
-        </a>
+    <a href="https://in.pinterest.com/dioraesthetic/_profile/"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span>PINTEREST</span>
+      <span class="arrow">↗</span>
+    </a>
 
-        <a href="https://open.spotify.com/user/31p5i6wapnrcqpnyqt7fqp3d5xmy"
-           target="_blank" rel="noopener noreferrer">
-            <span>SPOTIFY</span>
-            <span class="arrow">↗</span>
-        </a>
+    <a href="https://open.spotify.com/user/31p5i6wapnrcqpnyqt7fqp3d5xmy"
+       target="_blank"
+       rel="noopener noreferrer">
+      <span>SPOTIFY</span>
+      <span class="arrow">↗</span>
+    </a>
+
+  </div>
+
+  <!-- FAVOURITE SONGS -->
+
+  <section class="playlist-section">
+
+    <div class="small">
+      ✦ MY FAVOURITE SONGS ✦
+    </div>
+
+    <div class="spotify-players">
+
+      <!-- STEREO HEARTS -->
+
+      <iframe
+        src="https://open.spotify.com/embed/track/0nxbPn8VjdBShMBD6zNLQ9?utm_source=generator&theme=0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+      <!-- HEART AND SOUL -->
+
+      <iframe
+        src="https://open.spotify.com/embed/track/4D18693h4vrPc9RwcN8GJH?utm_source=generator&theme=0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
 
     </div>
 
-    <!-- MUSIC -->
+  </section>
 
-    <section class="playlist-section">
+  <!-- TRAVEL JOURNAL -->
 
-        <div class="small">✦ MY FAVOURITE SONGS ✦</div>
+  <section class="travel-section">
 
-        <div class="spotify-players">
+    <div class="small">
+      ✦ MY TRAVEL JOURNAL ✦
+    </div>
 
-            <iframe
-                src="https://open.spotify.com/embed/track/0nxbPn8VjdBShMBD6zNLQ9?utm_source=generator&theme=0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-            </iframe>
+    <h2>somewhere in the world.</h2>
 
-            <iframe
-                src="https://open.spotify.com/embed/track/4D18693h4vrPc9RwcN8GJH?utm_source=generator&theme=0"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy">
-            </iframe>
+    <p class="travel-caption">
+      collecting places, one trip at a time.
+    </p>
 
-        </div>
+    <!-- STATIC 2D MAP -->
 
-    </section>
+    <div class="flat-map">
 
-    <!-- TRAVEL JOURNAL -->
+      <img src="world-map.svg" alt="World map">
 
-    <section class="travel-section">
+      <!-- RIYADH: GOLD -->
 
-        <div class="small">✦ MY TRAVEL JOURNAL ✦</div>
+      <span class="map-dot riyadh"
+            style="left:61%; top:39%;">
+      </span>
 
-        <h2>somewhere in the world.</h2>
+      <!-- VISITED LOCATIONS: BEIGE -->
 
-        <p class="travel-caption">
-            collecting places, one trip at a time.
-        </p>
+      <!-- AL KHOBAR -->
 
-        <!-- SELF-CONTAINED STATIC WORLD MAP -->
+      <span class="map-dot"
+            style="left:63%; top:37%;">
+      </span>
 
-        <div class="world-map">
+      <!-- JEDDAH -->
 
-        <svg viewBox="0 0 1000 500"
-             xmlns="http://www.w3.org/2000/svg"
-             role="img"
-             aria-label="World map showing home in Riyadh and visited places">
+      <span class="map-dot"
+            style="left:60%; top:43%;">
+      </span>
 
-            <!-- MAP GRID -->
+      <!-- HYDERABAD -->
 
-            <path class="graticule"
-                d="M0 125 H1000 M0 250 H1000 M0 375 H1000
-                   M250 0 V500 M500 0 V500 M750 0 V500"/>
+      <span class="map-dot"
+            style="left:65%; top:49%;">
+      </span>
 
-            <!-- NORTH AMERICA -->
+      <!-- DUBAI -->
 
-            <path class="land"
-                d="M70 90 L110 60 L170 55 L210 75
-                   L260 65 L310 95 L330 130 L300 155
-                   L280 190 L250 205 L235 250
-                   L210 270 L190 240 L170 220
-                   L145 200 L120 175 L90 160
-                   L65 125 Z"/>
+      <span class="map-dot"
+            style="left:66%; top:38%;">
+      </span>
 
-            <!-- CENTRAL AMERICA -->
+      <!-- MARYLAND -->
 
-            <path class="land"
-                d="M235 240 L260 255 L275 275
-                   L265 290 L250 275 L240 260 Z"/>
+      <span class="map-dot"
+            style="left:27%; top:30%;">
+      </span>
 
-            <!-- SOUTH AMERICA -->
+      <!-- VIRGINIA -->
 
-            <path class="land"
-                d="M275 285 L325 285 L350 320
-                   L340 360 L320 405 L300 455
-                   L280 425 L265 380 L250 340 Z"/>
+      <span class="map-dot"
+            style="left:27%; top:33%;">
+      </span>
 
-            <!-- EUROPE -->
+      <!-- WASHINGTON DC -->
 
-            <path class="land"
-                d="M440 100 L475 80 L515 85
-                   L535 105 L520 130 L490 145
-                   L465 135 L445 150 L425 130 Z"/>
+      <span class="map-dot"
+            style="left:28%; top:28%;">
+      </span>
 
-            <!-- AFRICA -->
+    </div>
 
-            <path class="land"
-                d="M445 165 L505 145 L550 170
-                   L560 215 L540 270 L510 325
-                   L480 345 L460 300 L435 250
-                   L420 200 Z"/>
+    <!-- MAP LEGEND -->
 
-            <!-- ASIA -->
+    <div class="map-hint">
+      <span style="color:#e5bd78;">●</span>
+      RIYADH
+      &nbsp; · &nbsp;
+      <span style="color:#c8b08a;">●</span>
+      VISITED
+    </div>
 
-            <path class="land"
-                d="M515 90 L565 55 L640 45
-                   L710 65 L780 55 L850 85
-                   L920 100 L955 140 L925 175
-                   L870 180 L830 205 L780 190
-                   L740 220 L700 205 L665 185
-                   L625 175 L585 155 L545 145
-                   L520 125 Z"/>
+  </section>
 
-            <!-- ARABIAN PENINSULA -->
+  <!-- FOOTER -->
 
-            <path class="land"
-                d="M565 185 L620 180 L660 200
-                   L645 245 L615 265 L590 240
-                   L570 215 Z"/>
-
-            <!-- INDIA -->
-
-            <path class="land"
-                d="M680 210 L720 215 L740 245
-                   L725 290 L705 320 L690 280
-                   L675 245 Z"/>
-
-            <!-- SOUTH EAST ASIA -->
-
-            <path class="land"
-                d="M750 235 L790 230 L825 250
-                   L810 275 L780 265 L755 255 Z"/>
-
-            <!-- JAPAN -->
-
-            <path class="land"
-                d="M865 190 L875 200 L868 220
-                   L858 212 Z"/>
-
-            <!-- AUSTRALIA -->
-
-            <path class="land"
-                d="M790 335 L850 320 L900 345
-                   L890 390 L850 410 L810 390
-                   L785 365 Z"/>
-
-            <!-- RIYADH HOME PIN -->
-
-            <circle class="home-dot" cx="629.7" cy="181.4" r="7"/>
-
-            <text class="home-label"
-                  x="642" y="170">⌂ RIYADH</text>
-
-            <text class="home-label"
-                  x="642" y="184"
-                  style="font-size:9px">HOME</text>
-
-            <!-- AL KHOBAR -->
-
-            <circle class="map-dot" cx="639.4" cy="177.2" r="4"/>
-
-            <path class="leader" d="M639 177 L675 145"/>
-
-            <text class="map-label" x="678" y="142">
-                AL KHOBAR
-            </text>
-
-            <!-- JEDDAH -->
-
-            <circle class="map-dot" cx="608.9" cy="190.3" r="4"/>
-
-            <path class="leader" d="M609 190 L570 165"/>
-
-            <text class="map-label" x="520" y="162">
-                JEDDAH
-            </text>
-
-            <!-- DUBAI -->
-
-            <circle class="map-dot" cx="653.5" cy="180" r="4"/>
-
-            <path class="leader" d="M653 180 L690 195"/>
-
-            <text class="map-label" x="694" y="199">
-                DUBAI
-            </text>
-
-            <!-- HYDERABAD -->
-
-            <circle class="map-dot" cx="745.8" cy="201.7" r="4"/>
-
-            <path class="leader" d="M746 202 L775 215"/>
-
-            <text class="map-label" x="780" y="220">
-                HYDERABAD
-            </text>
-
-            <!-- USA: WASHINGTON DC -->
-
-            <circle class="map-dot" cx="286" cy="142" r="4"/>
-
-            <path class="leader" d="M286 142 L320 105"/>
-
-            <text class="map-label" x="323" y="103">
-                WASHINGTON DC
-            </text>
-
-            <!-- MARYLAND -->
-
-            <circle class="map-dot" cx="287" cy="141.5" r="3"/>
-
-            <path class="leader" d="M287 142 L320 130"/>
-
-            <text class="map-label" x="323" y="133">
-                MARYLAND
-            </text>
-
-            <!-- VIRGINIA -->
-
-            <circle class="map-dot" cx="281.5" cy="146" r="3"/>
-
-            <path class="leader" d="M281 146 L320 155"/>
-
-            <text class="map-label" x="323" y="159">
-                VIRGINIA
-            </text>
-
-        </svg>
-
-        </div>
-
-        <!-- MAP LEGEND -->
-
-        <div class="map-legend">
-            ⌂ HOME &nbsp; · &nbsp; ✦ PLACES VISITED
-        </div>
-
-        <!-- TRAVEL LIST -->
-
-        <div class="travel-list">
-
-            <div>⌂ &nbsp; HOME — RIYADH, SAUDI ARABIA</div>
-
-            <div>SAUDI ARABIA — AL KHOBAR · JEDDAH</div>
-
-            <div>INDIA — HYDERABAD</div>
-
-            <div>UAE — DUBAI</div>
-
-            <div>USA — MARYLAND · VIRGINIA · WASHINGTON DC</div>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-        2026 · PRIVATE SPACE
-    </footer>
+  <footer>
+    2026 · PRIVATE SPACE
+  </footer>
 
 </main>
 
