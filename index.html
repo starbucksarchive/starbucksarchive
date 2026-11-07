@@ -11,130 +11,136 @@
 
 <style>
 
+/* GENERAL */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  background: #0b0a09;
-  color: #e8e1d8;
-  font-family: 'DM Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  padding: 35px 20px;
+    min-height: 100vh;
+    background: #0b0a09;
+    color: #e8e1d8;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 35px 20px;
 }
 
 .container {
-  width: 100%;
-  max-width: 700px;
-  text-align: center;
-  animation: appear 1.2s ease;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    animation: appear 1.2s ease;
 }
 
 @keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* TEXT */
+/* MAIN TEXT */
 
 .small {
-  color: #777067;
-  font-size: 10px;
-  letter-spacing: 5px;
-  margin-bottom: 35px;
+    color: #777067;
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 35px;
 }
 
 h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(48px, 10vw, 85px);
-  font-weight: 300;
-  letter-spacing: 2px;
-  margin-bottom: 55px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 10vw, 85px);
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 55px;
 }
 
 /* SOCIAL LINKS */
 
 .links {
-  width: 100%;
-  max-width: 360px;
-  margin: auto;
-  border-top: 1px solid #35302b;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    border-top: 1px solid #35302b;
 }
 
 .links a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 23px 5px;
-  color: #c8bfb3;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 3px;
-  border-bottom: 1px solid #35302b;
-  transition: all .35s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 5px;
+    color: #c8bfb3;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #35302b;
+    transition: all .35s ease;
 }
 
 .links a:hover {
-  color: #fff;
-  padding-left: 15px;
-  padding-right: 15px;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .arrow {
-  color: #82766a;
-  font-size: 16px;
+    color: #82766a;
+    font-size: 16px;
 }
 
-/* MUSIC SECTION */
+/* FAVOURITE SONGS */
 
 .playlist-section {
-  margin: 65px auto 0;
-  width: 100%;
-  max-width: 360px;
+    margin: 65px auto 0;
+    width: 100%;
+    max-width: 360px;
 }
 
 .playlist-section .small {
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 .spotify-players {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .spotify-players iframe {
-  width: 100%;
-  height: 152px;
-  border: none;
-  border-radius: 12px;
+    width: 100%;
+    height: 152px;
+    border: none;
+    border-radius: 12px;
 }
 
 /* FOOTER */
 
 footer {
-  margin-top: 75px;
-  color: #514b44;
-  font-size: 9px;
-  letter-spacing: 4px;
+    margin-top: 75px;
+    color: #514b44;
+    font-size: 9px;
+    letter-spacing: 4px;
 }
 
 /* MOBILE */
 
 @media (max-width: 480px) {
-  body {
-    padding: 35px 18px;
-  }
+    body {
+        padding: 35px 18px;
+    }
+
+    h1 {
+        margin-bottom: 45px;
+    }
 }
 
 </style>
@@ -144,69 +150,73 @@ footer {
 
 <main class="container">
 
-  <!-- MAIN TITLE -->
-
-  <div class="small">
-    ✦ PERSONAL COLLECTION ✦
-  </div>
-
-  <h1>starbucks archive.</h1>
-
-  <!-- SOCIAL LINKS -->
-
-  <div class="links">
-
-    <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span>PINTEREST</span>
-      <span class="arrow">↗</span>
-    </a>
-
-    <a href="https://open.spotify.com/user/31p5i6wapnrcqpnyqt7fqp3d5xmy"
-       target="_blank"
-       rel="noopener noreferrer">
-      <span>SPOTIFY</span>
-      <span class="arrow">↗</span>
-    </a>
-
-  </div>
-
-  <!-- FAVOURITE SONGS -->
-
-  <section class="playlist-section">
+    <!-- MAIN TITLE -->
 
     <div class="small">
-      ✦ MY FAVOURITE SONGS ✦
+        ✦ PERSONAL COLLECTION ✦
     </div>
 
-    <div class="spotify-players">
+    <h1>starbucks archive.</h1>
 
-      <!-- STEREO HEARTS -->
+    <!-- SOCIAL LINKS -->
 
-      <iframe
-        src="https://open.spotify.com/embed/track/0nxbPn8VjdBShMBD6zNLQ9?utm_source=generator&theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
+    <div class="links">
 
-      <!-- HEART AND SOUL -->
+        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
+           target="_blank"
+           rel="noopener noreferrer">
 
-      <iframe
-        src="https://open.spotify.com/embed/track/4D18693h4vrPc9RwcN8GJH?utm_source=generator&theme=0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
+            <span>PINTEREST</span>
+            <span class="arrow">↗</span>
+
+        </a>
+
+        <a href="https://open.spotify.com/user/31p5i6wapnrcqpnyqt7fqp3d5xmy"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <span>SPOTIFY</span>
+            <span class="arrow">↗</span>
+
+        </a>
 
     </div>
 
-  </section>
+    <!-- FAVOURITE SONGS -->
 
-  <!-- FOOTER -->
+    <section class="playlist-section">
 
-  <footer>
-    2026 · PRIVATE SPACE
-  </footer>
+        <div class="small">
+            ✦ MY FAVOURITE SONGS ✦
+        </div>
+
+        <div class="spotify-players">
+
+            <!-- STEREO HEARTS -->
+
+            <iframe
+                src="https://open.spotify.com/embed/track/0nxbPn8VjdBShMBD6zNLQ9?utm_source=generator&theme=0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+
+            <!-- HEART AND SOUL -->
+
+            <iframe
+                src="https://open.spotify.com/embed/track/4D18693h4vrPc9RwcN8GJH?utm_source=generator&theme=0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        2026 · PRIVATE SPACE
+    </footer>
 
 </main>
 
