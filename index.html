@@ -1,5 +1,99 @@
+<style>
+.social-section,
+.spotify-section {
+    background: #42403f;
+    color: #decdbf;
+    padding: 45px 25px;
+    font-family: inherit;
+}
 
-<!-- SOCIAL LINKS -->
+.section-label {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: #decdbf;
+    margin-bottom: 30px;
+}
+
+.social-link {
+    max-width: 700px;
+    margin: auto;
+    padding: 23px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #decdbf;
+    color: #decdbf;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 4px;
+    transition: all .4s ease;
+}
+
+.social-link:hover {
+    background: #decdbf;
+    color: #42403f;
+}
+
+.spotify-heading {
+    text-align: center;
+    margin: 45px 0 35px;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 4px;
+}
+
+.spotify-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 400;
+    margin: 15px 0 10px;
+    color: #decdbf;
+}
+
+.spotify-heading p {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.spotify-frame {
+    max-width: 700px;
+    margin: auto;
+    padding: 13px;
+    border: 1px solid #decdbf;
+    background: #42403f;
+    box-shadow: 0 15px 45px rgba(0,0,0,.25);
+}
+
+.spotify-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 16px;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.spotify-frame iframe {
+    display: block;
+    border-radius: 8px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .social-section,
+    .spotify-section {
+        padding: 35px 16px;
+    }
+
+    .spotify-frame {
+        padding: 8px;
+    }
+}
+</style>
+
+<!-- PINTEREST -->
 
 <section class="social-section">
 
@@ -7,41 +101,53 @@
         ✦ FIND ME ELSEWHERE ✦
     </div>
 
-    <div class="links">
+    <a class="social-link"
+       href="https://in.pinterest.com/dioraesthetic/_profile/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-           target="_blank"
-           rel="noopener noreferrer">
+        <span>PINTEREST</span>
+        <span>↗</span>
 
-            <span>PINTEREST</span>
-            <span class="arrow">↗</span>
-
-        </a>
-
-    </div>
+    </a>
 
 </section>
 
-<!-- PINTEREST PREVIEW -->
+<!-- SPOTIFY -->
 
-<section class="pinterest-section">
+<section class="spotify-section">
 
     <div class="section-label">
-        ✦ MY PINTEREST WORLD ✦
+        ✦ A LITTLE MUSIC CORNER ✦
     </div>
 
-    <div class="pinterest-box">
+    <div class="spotify-heading">
 
-        <a href="https://in.pinterest.com/dioraesthetic/_profile/"
-           target="_blank"
-           rel="noopener noreferrer">
+        <span class="eyebrow">
+            NOW PLAYING IN MY WORLD
+        </span>
 
-            <img
-                src="https://placehold.co/700x350/dfcfb8/38271f?text=Explore+My+Pinterest"
-                alt="Pinterest preview"
-                style="width:100%; display:block;">
+        <h2>My Soundtrack.</h2>
 
-        </a>
+        <p>songs, moods & little moments.</p>
+
+    </div>
+
+    <div class="spotify-frame">
+
+        <div class="spotify-top">
+            <span>MY PLAYLIST</span>
+            <span>✦ 01</span>
+        </div>
+
+        <iframe
+            src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?utm_source=generator&theme=0"
+            height="352"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
 
     </div>
 
