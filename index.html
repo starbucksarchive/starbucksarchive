@@ -1,14 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>starbucks archive.</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+
+/* ORIGINAL COLOUR PALETTE */
+
+:root {
+    --brown: #38271f;
+    --dark: #241914;
+    --cream: #f3eadb;
+    --beige: #dfcfb8;
+    --muted: #a58d75;
+    --gold: #b39a72;
+}
 
 /* GENERAL */
 
@@ -19,133 +32,234 @@
 }
 
 body {
-    min-height: 100vh;
-    background: #0b0a09;
-    color: #c8bfb3;
+    background: var(--cream);
+    color: var(--brown);
     font-family: 'DM Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 65px 22px;
+    padding: 30px 18px;
 }
 
 .container {
-    width: 100%;
     max-width: 760px;
-    text-align: center;
-    animation: appear 1.2s ease;
+    margin: auto;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.small {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--muted);
+    margin-top: 55px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(42px, 9vw, 76px);
+    margin: 12px 0 10px;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 55px;
+}
+
+section {
+    margin: 55px 0;
+}
+
+.section-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* INTRODUCTION */
 
-.small {
-    color: #82766a;
-    font-size: 12px;
-    letter-spacing: 5px;
-    margin-bottom: 35px;
-}
-
-h1 {
+.intro {
+    text-align: center;
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(58px, 11vw, 100px);
-    font-weight: 300;
-    letter-spacing: 1px;
-    color: #c8bfb3;
-    margin-bottom: 60px;
-}
-
-/* SECTION HEADINGS */
-
-.section-label {
-    color: #82766a;
-    font-size: 12px;
-    letter-spacing: 4px;
-    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 530px;
+    margin: auto;
 }
 
 /* SOCIAL LINKS */
 
-.links {
-    width: 100%;
-    max-width: 430px;
-    margin: 0 auto;
-    border-top: 1px solid #35302b;
-}
-
 .links a {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 27px 12px;
-    color: #c8bfb3;
     text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 4px;
-    border-bottom: 1px solid #35302b;
-    transition: all .35s ease;
+    color: var(--brown);
+    padding: 17px 5px;
+    border-bottom: 1px solid var(--beige);
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
 }
 
 .links a:hover {
-    color: #c8bfb3;
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 13px;
+    color: var(--gold);
 }
 
 .arrow {
-    color: #82766a;
+    color: var(--muted);
+}
+
+/* SPOTIFY */
+
+.playlist-box {
+    background: var(--beige);
+    padding: 12px;
+}
+
+iframe {
+    border: none;
+    display: block;
+    border-radius: 5px;
+}
+
+/* PINTEREST */
+
+.pinterest-box {
+    background: var(--beige);
+    padding: 12px;
+    overflow: hidden;
+}
+
+.pinterest-box iframe {
+    width: 100%;
+    max-width: 100%;
+    border: none;
+}
+
+.pinterest-link {
+    display: block;
+    text-align: center;
+    margin-top: 17px;
+    text-decoration: none;
+    color: var(--brown);
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--beige);
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.pinterest-link:hover {
+    color: var(--gold);
+}
+
+/* PHOTO GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    background: var(--beige);
+}
+
+.gallery p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+/* PERSONAL NOTES */
+
+.note-box {
+    background: #e8ddcc;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 140px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    background: transparent;
+    color: var(--brown);
+    font-family: 'Cormorant Garamond', serif;
     font-size: 19px;
 }
 
-/* PLAYLIST SECTION */
-
-.playlist-section {
-    margin: 75px auto 0;
-    width: 100%;
-    max-width: 430px;
+textarea::placeholder {
+    color: var(--muted);
 }
 
-.playlist-section .section-label {
-    margin-bottom: 28px;
-}
-
-.playlist-box {
-    background: #151310;
-    border: 1px solid #35302b;
-    border-radius: 14px;
-    padding: 10px;
-}
-
-.spotify-players {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.spotify-players iframe {
-    display: block;
-    width: 100%;
-    height: 352px;
+button {
+    background: var(--brown);
+    color: var(--cream);
     border: none;
-    border-radius: 9px;
+    padding: 11px 20px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: var(--gold);
+}
+
+#saved-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* CURRENTLY LOVING */
+
+.loving-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.loving-card {
+    background: #e8ddcc;
+    padding: 20px;
+    text-align: center;
+}
+
+.loving-card span {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 9px;
+}
+
+.loving-card p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
 }
 
 /* FOOTER */
 
 footer {
-    margin-top: 85px;
-    color: #62594f;
-    font-size: 11px;
-    letter-spacing: 4px;
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    padding: 45px 0 20px;
 }
 
 /* MOBILE */
@@ -153,29 +267,15 @@ footer {
 @media (max-width: 480px) {
 
     body {
-        padding: 55px 20px;
+        padding: 15px;
+    }
+
+    section {
+        margin: 43px 0;
     }
 
     h1 {
-        font-size: clamp(52px, 12vw, 72px);
-        margin-bottom: 48px;
-    }
-
-    .small {
-        font-size: 11px;
-    }
-
-    .links a {
-        padding: 24px 10px;
-        font-size: 13px;
-    }
-
-    .playlist-section {
-        margin-top: 60px;
-    }
-
-    footer {
-        margin-top: 70px;
+        font-size: 46px;
     }
 
 }
@@ -195,9 +295,32 @@ footer {
 
     <h1>starbucks archive.</h1>
 
+    <p class="subtitle">
+        a little corner of my universe.
+    </p>
+
+
+    <!-- ABOUT -->
+
+    <section>
+
+        <div class="section-label">
+            ✦ A LITTLE INTRODUCTION ✦
+        </div>
+
+        <p class="intro">
+            Welcome to my little archive.
+            A collection of songs, photographs,
+            thoughts, memories and everything
+            that makes life feel a little more magical.
+        </p>
+
+    </section>
+
+
     <!-- SOCIAL LINKS -->
 
-    <section class="social-section">
+    <section>
 
         <div class="section-label">
             ✦ FIND ME ELSEWHERE ✦
@@ -218,9 +341,10 @@ footer {
 
     </section>
 
-    <!-- FAVOURITE SONGS -->
 
-    <section class="playlist-section">
+    <!-- SPOTIFY -->
+
+    <section>
 
         <div class="section-label">
             ✦ SONGS ON REPEAT ✦
@@ -228,29 +352,186 @@ footer {
 
         <div class="playlist-box">
 
-            <div class="spotify-players">
+            <iframe
+                src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?theme=0"
+                width="100%"
+                height="352"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
 
-                <iframe
-                    src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?theme=0"
-                    width="100%"
-                    height="352"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-                </iframe>
+        </div>
 
+    </section>
+
+
+    <!-- PINTEREST PREVIEW -->
+
+    <section>
+
+        <div class="section-label">
+            ✦ MY PINTEREST WORLD ✦
+        </div>
+
+        <div class="pinterest-box">
+
+            <!-- Replace YOUR_PIN_ID with a real Pinterest pin ID -->
+
+            <iframe
+                src="https://assets.pinterest.com/ext/embed.html?id=YOUR_PIN_ID"
+                height="450"
+                width="100%"
+                scrolling="no"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+        <a class="pinterest-link"
+           href="https://in.pinterest.com/dioraesthetic/_profile/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            EXPLORE MY PINTEREST ↗
+
+        </a>
+
+    </section>
+
+
+    <!-- PHOTO GALLERY -->
+
+    <section>
+
+        <div class="section-label">
+            ✦ FRAGMENTS OF LIFE ✦
+        </div>
+
+        <div class="gallery">
+
+            <div>
+                <img src="https://placehold.co/400x500/e0d2bd/594435?text=Your+Photo" alt="Photo placeholder">
+                <p>little moments.</p>
+            </div>
+
+            <div>
+                <img src="https://placehold.co/400x500/d6c5ad/594435?text=Your+Photo" alt="Photo placeholder">
+                <p>soft memories.</p>
+            </div>
+
+            <div>
+                <img src="https://placehold.co/400x500/e0d2bd/594435?text=Your+Photo" alt="Photo placeholder">
+                <p>somewhere in time.</p>
+            </div>
+
+            <div>
+                <img src="https://placehold.co/400x500/d6c5ad/594435?text=Your+Photo" alt="Photo placeholder">
+                <p>collected feelings.</p>
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- PERSONAL NOTES -->
+
+    <section>
+
+        <div class="section-label">
+            ✦ NOTES TO MYSELF ✦
+        </div>
+
+        <div class="note-box">
+
+            <textarea
+                id="note"
+                placeholder="Write down a thought, a memory, a little secret...">
+            </textarea>
+
+            <button onclick="saveNote()">
+                SAVE NOTE
+            </button>
+
+            <p id="saved-note"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURRENTLY LOVING -->
+
+    <section>
+
+        <div class="section-label">
+            ✦ CURRENTLY LOVING ✦
+        </div>
+
+        <div class="loving-grid">
+
+            <div class="loving-card">
+                <span>READING</span>
+                <p>Your favourite book</p>
+            </div>
+
+            <div class="loving-card">
+                <span>LISTENING</span>
+                <p>Your current song</p>
+            </div>
+
+            <div class="loving-card">
+                <span>WATCHING</span>
+                <p>Your favourite film</p>
+            </div>
+
+            <div class="loving-card">
+                <span>LOVING</span>
+                <p>Little things in life</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
     <!-- FOOTER -->
 
     <footer>
-        2026 · PRIVATE SPACE
+        2026 · A PRIVATE LITTLE ARCHIVE
+        <br><br>
+        MADE WITH ♡
     </footer>
 
 </main>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function saveNote() {
+
+    const note = document.getElementById("note").value;
+
+    localStorage.setItem("myArchiveNote", note);
+
+    document.getElementById("saved-note").innerText =
+        "✦ Your note has been saved.";
+
+}
+
+window.onload = function() {
+
+    const saved = localStorage.getItem("myArchiveNote");
+
+    if (saved) {
+        document.getElementById("note").value = saved;
+    }
+
+};
+
+</script>
 
 </body>
 </html>
