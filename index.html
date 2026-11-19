@@ -1,4 +1,7 @@
 <style>
+
+/* MAIN SECTIONS */
+
 .social-section,
 .spotify-section {
     background: #000000;
@@ -28,16 +31,29 @@
     align-items: center;
     border: 1px solid #decdbf;
     color: #decdbf;
+    background: transparent;
     text-decoration: none;
     font-size: 12px;
     letter-spacing: 4px;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
 }
 
 .social-link:hover {
-    background: #decdbf;
-    color: #000000;
-    letter-spacing: 6px;
+    background: #111111;
+    color: #decdbf;
+    border-color: #decdbf;
+    letter-spacing: 5px;
+    box-shadow: 0 0 15px rgba(222,205,191,0.08);
+    transform: translateY(-2px);
+}
+
+.social-link .arrow {
+    font-size: 18px;
+    transition: transform 0.4s ease;
+}
+
+.social-link:hover .arrow {
+    transform: translate(3px, -3px);
 }
 
 /* SPOTIFY HEADING */
@@ -75,7 +91,12 @@
     padding: 13px;
     border: 1px solid #decdbf;
     background: #000000;
-    box-shadow: 0 15px 45px rgba(222,205,191,.08);
+    box-shadow: 0 15px 45px rgba(222,205,191,0.08);
+    transition: box-shadow 0.4s ease;
+}
+
+.spotify-frame:hover {
+    box-shadow: 0 15px 45px rgba(222,205,191,0.13);
 }
 
 .spotify-top {
@@ -96,6 +117,7 @@
 /* MOBILE RESPONSIVENESS */
 
 @media (max-width: 600px) {
+
     .social-section,
     .spotify-section {
         padding: 35px 16px;
@@ -104,7 +126,19 @@
     .spotify-frame {
         padding: 8px;
     }
+
 }
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .social-link,
+    .social-link .arrow,
+    .spotify-frame {
+        transition: none;
+    }
+}
+
 </style>
 
 
@@ -122,7 +156,7 @@
        rel="noopener noreferrer">
 
         <span>PINTEREST</span>
-        <span>↗</span>
+        <span class="arrow">↗</span>
 
     </a>
 
