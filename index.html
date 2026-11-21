@@ -1,413 +1,346 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Little Corner</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000000;
+  color: #decdbf;
+  font-family: Arial, sans-serif;
+}
 
 /* MAIN SECTIONS */
 
 .social-section,
 .spotify-section {
-    background: #000000;
-    color: #decdbf;
-    padding: 45px 25px;
-    font-family: inherit;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 35px 20px;
 }
-
-.social-section *,
-.spotify-section * {
-    box-sizing: border-box;
-}
-
-/* SECTION LABEL */
 
 .section-label {
-    text-align: center;
-    font-size: 9px;
-    letter-spacing: 4px;
-    color: #decdbf;
-    margin-bottom: 25px;
-    opacity: .85;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #decdbf;
+  margin-bottom: 25px;
 }
 
-/* MIDNIGHT NEWS - COMPACT RECTANGLE */
+/* MIDNIGHT NEWS */
 
 .midnight-feature {
-    max-width: 850px;
-    margin: auto;
-    padding: 19px 30px;
-    border: 1px solid rgba(222,205,191,.45);
-    background: #0b0b0b;
-    text-align: center;
-    transition: .3s ease;
+  max-width: 850px;
+  margin: 0 auto 25px;
+  padding: 17px 25px;
+  background: #0b0b0b;
+  border: 1px solid rgba(222,205,191,.45);
+  text-align: center;
+  transition: .3s ease;
 }
 
 .midnight-feature:hover {
-    border-color: #decdbf;
-    box-shadow: 0 8px 25px rgba(222,205,191,.06);
+  border-color: #decdbf;
+  box-shadow: 0 10px 35px rgba(222,205,191,.07);
 }
 
 .midnight-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    font-size: 8px;
-    letter-spacing: 2px;
-    color: #decdbf;
-    opacity: .7;
-    margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #decdbf;
+  opacity: .7;
+  margin-bottom: 12px;
 }
 
 .midnight-feature h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(32px, 5vw, 46px);
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: #decdbf;
-    margin: 0;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(27px, 5vw, 42px);
+  letter-spacing: 3px;
+  margin: 8px 0 5px;
+  color: #decdbf;
 }
 
 .midnight-tagline {
-    font-family: Georgia, serif;
-    font-size: 13px;
-    font-style: italic;
-    color: #decdbf;
-    opacity: .8;
-    margin-top: 4px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 14px;
+  margin: 5px 0 8px;
+  color: #decdbf;
+}
+
+.midnight-status {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #decdbf;
+  margin: 8px 0;
 }
 
 .midnight-divider {
-    height: 1px;
-    max-width: 260px;
-    margin: 12px auto;
-    background: rgba(222,205,191,.3);
-}
-
-.midnight-categories {
-    font-size: 8px;
-    letter-spacing: 2px;
-    line-height: 1.8;
-    color: #decdbf;
-    opacity: .8;
+  width: 45px;
+  height: 1px;
+  background: #decdbf;
+  opacity: .5;
+  margin: 12px auto;
 }
 
 .midnight-button {
-    display: inline-block;
-    padding: 10px 22px;
-    border: 1px solid #decdbf;
-    color: #decdbf;
-    background: transparent;
-    text-decoration: none;
-    font-size: 8px;
-    letter-spacing: 2px;
-    transition: .3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #decdbf;
+  color: #decdbf;
+  text-decoration: none;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin: 5px 0 8px;
+  transition: .3s ease;
 }
 
 .midnight-button:hover {
-    background: #decdbf;
-    color: #000000;
+  background: #decdbf;
+  color: #000000;
 }
 
 .midnight-footer {
-    font-size: 7px;
-    letter-spacing: 2px;
-    color: #decdbf;
-    opacity: .55;
-    margin-top: 12px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  opacity: .6;
+  margin-top: 8px;
 }
 
-/* SOCIAL LINKS - STACKED */
-
-.social-links-heading {
-    text-align: center;
-    margin: 32px 0 17px;
-    font-family: Georgia, serif;
-    font-size: 23px;
-    font-weight: 400;
-    color: #decdbf;
-}
+/* SOCIAL LINKS */
 
 .social-links {
-    max-width: 850px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
 }
 
 .social-link {
-    width: 100%;
-    padding: 17px 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid rgba(222,205,191,.4);
-    color: #decdbf;
-    background: #090909;
-    text-decoration: none;
-    font-size: 9px;
-    letter-spacing: 3px;
-    transition: .3s ease;
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  background: #0b0b0b;
+  border: 1px solid rgba(222,205,191,.35);
+  color: #decdbf;
+  text-decoration: none;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  transition: .3s ease;
 }
 
 .social-link:hover {
-    background: #15120f;
-    border-color: #decdbf;
-    padding-left: 28px;
+  border-color: #decdbf;
+  background: #111111;
 }
 
-.social-link .arrow {
-    font-size: 16px;
-    transition: .3s ease;
-}
-
-.social-link:hover .arrow {
-    transform: translate(3px,-3px);
-}
-
-/* SPOTIFY - UNCHANGED */
+/* SPOTIFY SECTION */
 
 .spotify-section {
-    padding-top: 40px;
-    padding-bottom: 100px;
+  padding-top: 40px;
+  padding-bottom: 100px;
 }
 
 .spotify-heading {
-    text-align: center;
-    margin: 0 auto 45px;
+  text-align: center;
+  margin: 0 auto 45px;
 }
 
 .eyebrow {
-    font-size: 9px;
-    letter-spacing: 4px;
-    color: #decdbf;
-    opacity: .8;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #decdbf;
+  opacity: .8;
 }
 
 .spotify-heading h2 {
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 7vw, 60px);
-    font-weight: 400;
-    margin: 18px 0 12px;
-    color: #decdbf;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 7vw, 60px);
+  font-weight: 400;
+  margin: 18px 0 12px;
+  color: #decdbf;
 }
 
 .spotify-heading p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 15px;
-    color: #decdbf;
-    opacity: .75;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #decdbf;
+  opacity: .75;
 }
 
 .spotify-frame {
-    max-width: 750px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid rgba(222,205,191,.5);
-    background: #0b0b0b;
-    box-shadow: 0 15px 50px rgba(222,205,191,.05);
-    transition: .4s ease;
+  max-width: 750px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(222,205,191,.5);
+  background: #0b0b0b;
+  box-shadow: 0 15px 50px rgba(222,205,191,.05);
+  transition: .4s ease;
 }
 
 .spotify-frame:hover {
-    border-color: #decdbf;
-    box-shadow: 0 15px 55px rgba(222,205,191,.1);
+  border-color: #decdbf;
+  box-shadow: 0 15px 55px rgba(222,205,191,.1);
 }
 
 .spotify-top {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 3px 18px;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: #decdbf;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 3px 18px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #decdbf;
 }
 
 .spotify-frame iframe {
-    display: block;
-    width: 100%;
-    border-radius: 8px;
+  display: block;
+  width: 100%;
+  border-radius: 8px;
 }
 
 /* MOBILE */
 
 @media (max-width: 600px) {
+  .social-section {
+    padding: 25px 14px;
+  }
 
-    .social-section,
-    .spotify-section {
-        padding: 35px 16px;
-    }
+  .midnight-feature {
+    padding: 15px 13px;
+  }
 
-    .midnight-feature {
-        padding: 17px 13px;
-    }
+  .midnight-top {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
 
-    .midnight-top {
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
+  .midnight-feature h2 {
+    letter-spacing: 2px;
+  }
 
-    .midnight-feature h2 {
-        font-size: 32px;
-    }
+  .spotify-frame {
+    padding: 12px;
+  }
 
-    .midnight-categories {
-        font-size: 7px;
-        letter-spacing: 1px;
-    }
-
-    .social-links-heading {
-        margin-top: 30px;
-    }
-
-    .social-link {
-        padding: 16px;
-    }
-
-    .spotify-frame {
-        padding: 10px;
-    }
-
-    .spotify-section {
-        padding-top: 25px;
-    }
+  .spotify-top {
+    font-size: 8px;
+  }
 }
-
-/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-    .midnight-feature,
-    .midnight-button,
-    .social-link,
-    .social-link .arrow,
-    .spotify-frame {
-        transition: none;
-    }
+  * {
+    transition: none !important;
+  }
 }
-
 </style>
+</head>
 
+<body>
 
-<!-- SOCIAL SECTION -->
+<!-- MIDNIGHT.NEWS AND SOCIAL LINKS -->
 
 <section class="social-section">
 
-    <div class="section-label">
-        ✦ &nbsp; A LITTLE CORNER OF MY WORLD &nbsp; ✦
+  <div class="section-label">✦ &nbsp; MY LITTLE CORNER &nbsp; ✦</div>
+
+  <div class="midnight-feature">
+
+    <div class="midnight-top">
+      <span>INDEPENDENT DIGITAL MAGAZINE</span>
+      <span>NOW LIVE ✦</span>
     </div>
 
-    <!-- MIDNIGHT NEWS -->
+    <h2>MIDNIGHT.NEWS</h2>
 
-    <div class="midnight-feature">
+    <p class="midnight-tagline">Every hour has a story.</p>
 
-        <div class="midnight-top">
-            <span>INDEPENDENT DIGITAL MAGAZINE</span>
-            <span>NOW LIVE ✦</span>
-        </div>
+    <div class="midnight-divider"></div>
 
-        <h2>MIDNIGHT.NEWS</h2>
+    <a
+      class="midnight-button"
+      href="https://starbucksarchive.github.io/MIDNIGHT.NEWS/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      EXPLORE THE PUBLICATION ↗
+    </a>
 
-        <div class="midnight-tagline">
-            Every hour has a story.
-        </div>
-
-        <div class="midnight-divider"></div>
-
-        <div class="midnight-categories">
-            WORLD · CULTURE · LIFESTYLE · TECHNOLOGY · WATCH
-        </div>
-
-        <div style="margin-top:15px;">
-
-            <a
-                class="midnight-button"
-                href="https://starbucksarchive.github.io/MIDNIGHT.NEWS/"
-                target="_blank"
-                rel="noopener noreferrer">
-
-                EXPLORE THE PUBLICATION ↗
-
-            </a>
-
-        </div>
-
-        <div class="midnight-footer">
-            MIDNIGHT.NEWS · THE DAILY EDITION
-        </div>
-
+    <div class="midnight-footer">
+      MIDNIGHT.NEWS · THE DAILY EDITION
     </div>
 
-    <!-- SOCIAL LINKS -->
+  </div>
 
-    <h3 class="social-links-heading">
-        Find me elsewhere.
-    </h3>
+  <div class="social-links">
 
-    <div class="social-links">
+    <a
+      class="social-link"
+      href="https://in.pinterest.com/dioraesthetic/_profile/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      PINTEREST ↗
+    </a>
 
-        <a class="social-link"
-           href="https://in.pinterest.com/dioraesthetic/_profile/"
-           target="_blank"
-           rel="noopener noreferrer">
+    <a
+      class="social-link"
+      href="https://www.tiktok.com/@chrisxy.xin"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TIKTOK ↗
+    </a>
 
-            <span>PINTEREST</span>
-            <span class="arrow">↗</span>
-
-        </a>
-
-        <a class="social-link"
-           href="https://www.tiktok.com/@chrisxy.xin"
-           target="_blank"
-           rel="noopener noreferrer">
-
-            <span>TIKTOK</span>
-            <span class="arrow">↗</span>
-
-        </a>
-
-    </div>
+  </div>
 
 </section>
 
-
-<!-- SPOTIFY SECTION -->
+<!-- SPOTIFY -->
 
 <section class="spotify-section">
 
-    <div class="section-label">
-        ✦ &nbsp; THE SOUNDTRACK &nbsp; ✦
+  <div class="section-label">✦ &nbsp; THE SOUNDTRACK &nbsp; ✦</div>
+
+  <div class="spotify-heading">
+    <span class="eyebrow">NOW PLAYING IN MY WORLD</span>
+    <h2>My Soundtrack.</h2>
+    <p>songs, moods & little moments.</p>
+  </div>
+
+  <div class="spotify-frame">
+
+    <div class="spotify-top">
+      <span>MY PLAYLIST</span>
+      <span>✦ 01</span>
     </div>
 
-    <div class="spotify-heading">
+    <iframe
+      src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?utm_source=generator&theme=0"
+      height="352"
+      frameborder="0"
+      allowfullscreen
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
 
-        <span class="eyebrow">
-            NOW PLAYING IN MY WORLD
-        </span>
-
-        <h2>My Soundtrack.</h2>
-
-        <p>
-            songs, moods & little moments.
-        </p>
-
-    </div>
-
-    <div class="spotify-frame">
-
-        <div class="spotify-top">
-            <span>MY PLAYLIST</span>
-            <span>✦ 01</span>
-        </div>
-
-        <iframe
-            src="https://open.spotify.com/embed/playlist/0CQjIpg3pmaO6V1lfR7wCX?utm_source=generator&theme=0"
-            height="352"
-            frameborder="0"
-            allowfullscreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy">
-        </iframe>
-
-    </div>
+  </div>
 
 </section>
+
+</body>
+</html>
