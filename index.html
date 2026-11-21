@@ -1,15 +1,13 @@
 
 <style>
 
-/* =========================
-   MAIN SECTIONS
-========================= */
+/* MAIN SECTIONS */
 
 .social-section,
 .spotify-section {
     background: #000000;
     color: #decdbf;
-    padding: 55px 25px;
+    padding: 45px 25px;
     font-family: inherit;
     box-sizing: border-box;
 }
@@ -19,28 +17,23 @@
     box-sizing: border-box;
 }
 
-/* =========================
-   SECTION LABEL
-========================= */
+/* SECTION LABEL */
 
 .section-label {
     text-align: center;
     font-size: 9px;
     letter-spacing: 4px;
     color: #decdbf;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     opacity: .85;
 }
 
-/* =========================
-   MIDNIGHT NEWS
-   COMPACT LANDSCAPE CARD
-========================= */
+/* MIDNIGHT NEWS - COMPACT RECTANGLE */
 
 .midnight-feature {
     max-width: 850px;
     margin: auto;
-    padding: 25px 35px;
+    padding: 19px 30px;
     border: 1px solid rgba(222,205,191,.45);
     background: #0b0b0b;
     text-align: center;
@@ -61,12 +54,12 @@
     letter-spacing: 2px;
     color: #decdbf;
     opacity: .7;
-    margin-bottom: 17px;
+    margin-bottom: 12px;
 }
 
 .midnight-feature h2 {
     font-family: Georgia, serif;
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(32px, 5vw, 46px);
     font-weight: 400;
     letter-spacing: 2px;
     color: #decdbf;
@@ -79,34 +72,27 @@
     font-style: italic;
     color: #decdbf;
     opacity: .8;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .midnight-divider {
     height: 1px;
-    max-width: 300px;
-    margin: 15px auto;
+    max-width: 260px;
+    margin: 12px auto;
     background: rgba(222,205,191,.3);
-}
-
-.midnight-inside {
-    font-size: 8px;
-    letter-spacing: 3px;
-    color: #decdbf;
-    opacity: .8;
 }
 
 .midnight-categories {
     font-size: 8px;
     letter-spacing: 2px;
-    line-height: 2;
+    line-height: 1.8;
     color: #decdbf;
     opacity: .8;
 }
 
 .midnight-button {
     display: inline-block;
-    padding: 11px 23px;
+    padding: 10px 22px;
     border: 1px solid #decdbf;
     color: #decdbf;
     background: transparent;
@@ -126,17 +112,14 @@
     letter-spacing: 2px;
     color: #decdbf;
     opacity: .55;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
-/* =========================
-   SOCIAL LINKS
-   VERTICAL LAYOUT
-========================= */
+/* SOCIAL LINKS - STACKED */
 
 .social-links-heading {
     text-align: center;
-    margin: 42px 0 20px;
+    margin: 32px 0 17px;
     font-family: Georgia, serif;
     font-size: 23px;
     font-weight: 400;
@@ -148,12 +131,12 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 9px;
 }
 
 .social-link {
     width: 100%;
-    padding: 19px 22px;
+    padding: 17px 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,10 +164,7 @@
     transform: translate(3px,-3px);
 }
 
-/* =========================
-   SPOTIFY SECTION
-   KEPT AS BEFORE
-========================= */
+/* SPOTIFY - UNCHANGED */
 
 .spotify-section {
     padding-top: 40px;
@@ -219,8 +199,6 @@
     opacity: .75;
 }
 
-/* SPOTIFY PLAYER */
-
 .spotify-frame {
     max-width: 750px;
     margin: auto;
@@ -251,19 +229,17 @@
     border-radius: 8px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .social-section,
     .spotify-section {
-        padding: 40px 16px;
+        padding: 35px 16px;
     }
 
     .midnight-feature {
-        padding: 22px 15px;
+        padding: 17px 13px;
     }
 
     .midnight-top {
@@ -272,12 +248,7 @@
     }
 
     .midnight-feature h2 {
-        font-size: 34px;
-    }
-
-    .midnight-inside {
-        font-size: 7px;
-        letter-spacing: 2px;
+        font-size: 32px;
     }
 
     .midnight-categories {
@@ -286,11 +257,11 @@
     }
 
     .social-links-heading {
-        margin-top: 35px;
+        margin-top: 30px;
     }
 
     .social-link {
-        padding: 17px 16px;
+        padding: 16px;
     }
 
     .spotify-frame {
@@ -302,9 +273,7 @@
     }
 }
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
     .midnight-feature,
@@ -319,16 +288,13 @@
 </style>
 
 
-<!-- =========================
-     SOCIAL SECTION
-========================= -->
+<!-- SOCIAL SECTION -->
 
 <section class="social-section">
 
     <div class="section-label">
         ✦ &nbsp; A LITTLE CORNER OF MY WORLD &nbsp; ✦
     </div>
-
 
     <!-- MIDNIGHT NEWS -->
 
@@ -347,17 +313,11 @@
 
         <div class="midnight-divider"></div>
 
-        <div class="midnight-inside">
-            THE WORLD, THROUGH AN EDITORIAL LENS
-        </div>
-
-        <div class="midnight-divider"></div>
-
         <div class="midnight-categories">
             WORLD · CULTURE · LIFESTYLE · TECHNOLOGY · WATCH
         </div>
 
-        <div style="margin-top:20px;">
+        <div style="margin-top:15px;">
 
             <a
                 class="midnight-button"
@@ -376,7 +336,6 @@
         </div>
 
     </div>
-
 
     <!-- SOCIAL LINKS -->
 
@@ -411,9 +370,7 @@
 </section>
 
 
-<!-- =========================
-     SPOTIFY SECTION
-========================= -->
+<!-- SPOTIFY SECTION -->
 
 <section class="spotify-section">
 
