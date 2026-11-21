@@ -1,217 +1,269 @@
 
 <style>
 
-/* MAIN SECTIONS */
+/* ==============================
+   GLOBAL DESIGN
+============================== */
 
 .social-section,
 .spotify-section {
-    background: #000000;
+    background: #000;
     color: #decdbf;
-    padding: 45px 25px;
+    padding: 85px 25px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
-/* SECTION LABELS */
+.social-section *,
+.spotify-section * {
+    box-sizing: border-box;
+}
+
+/* ==============================
+   SECTION INTRO
+============================== */
 
 .section-label {
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 5px;
     color: #decdbf;
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+    opacity: .8;
 }
 
-/* MIDNIGHT NEWS PREVIEW */
+/* ==============================
+   MIDNIGHT FEATURE
+============================== */
 
 .midnight-feature {
-    max-width: 700px;
-    margin: 0 auto 40px;
-    padding: 35px 30px;
-    border: 1px solid #decdbf;
-    background: #101010;
+    max-width: 850px;
+    margin: auto;
+    padding: 65px 35px;
+    border: 1px solid rgba(222,205,191,.55);
+    background: linear-gradient(
+        145deg,
+        #141210,
+        #090909 65%,
+        #11100e
+    );
     text-align: center;
-    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    transition: .4s ease;
 }
 
 .midnight-feature:hover {
-    box-shadow: 0 12px 35px rgba(222,205,191,0.10);
-    transform: translateY(-3px);
+    border-color: #decdbf;
+    box-shadow: 0 15px 50px rgba(222,205,191,.08);
+    transform: translateY(-4px);
 }
 
 .midnight-top {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    font-size: 9px;
+    gap: 15px;
+    font-size: 8px;
     letter-spacing: 3px;
     color: #decdbf;
-    margin-bottom: 28px;
+    opacity: .8;
+    margin-bottom: 65px;
 }
 
 .midnight-feature h2 {
     font-family: Georgia, serif;
-    font-size: clamp(34px, 7vw, 55px);
+    font-size: clamp(42px, 8vw, 76px);
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #decdbf;
-    margin: 0 0 12px;
+    margin: 0;
 }
 
 .midnight-tagline {
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 17px;
     color: #decdbf;
-    margin-bottom: 25px;
+    opacity: .85;
+    margin-top: 14px;
 }
 
 .midnight-divider {
     height: 1px;
-    background: #decdbf;
-    opacity: 0.4;
-    margin: 22px 0;
+    max-width: 400px;
+    margin: 35px auto;
+    background: rgba(222,205,191,.35);
 }
 
 .midnight-inside {
     font-size: 9px;
     letter-spacing: 4px;
+    line-height: 2;
     color: #decdbf;
-    margin-bottom: 18px;
+    opacity: .8;
+    margin-bottom: 20px;
 }
 
 .midnight-feature h3 {
     font-family: Georgia, serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: clamp(25px, 4vw, 34px);
     color: #decdbf;
-    margin: 0 0 14px;
+    margin: 0 0 18px;
 }
 
 .midnight-description {
-    max-width: 450px;
+    max-width: 460px;
     margin: auto;
     font-size: 12px;
-    line-height: 2;
+    line-height: 2.2;
     letter-spacing: 1px;
     color: #decdbf;
-    opacity: 0.85;
+    opacity: .75;
 }
 
 .midnight-categories {
     font-size: 9px;
     letter-spacing: 2px;
-    line-height: 2;
+    line-height: 2.5;
     color: #decdbf;
+    opacity: .85;
 }
 
 .midnight-button {
     display: inline-block;
-    padding: 15px 27px;
+    padding: 17px 30px;
     border: 1px solid #decdbf;
     color: #decdbf;
     background: transparent;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 3px;
-    transition: all 0.4s ease;
+    transition: .35s ease;
 }
 
 .midnight-button:hover {
     background: #decdbf;
-    color: #101010;
-    letter-spacing: 4px;
+    color: #000;
 }
 
 .midnight-footer {
-    font-size: 9px;
+    font-size: 8px;
     letter-spacing: 3px;
     color: #decdbf;
-    margin-top: 25px;
+    opacity: .65;
+    margin-top: 40px;
 }
 
-/* SOCIAL LINKS */
+/* ==============================
+   SOCIAL LINKS
+============================== */
+
+.social-links-heading {
+    text-align: center;
+    margin: 75px 0 25px;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.social-links {
+    max-width: 850px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
 
 .social-link {
-    max-width: 700px;
-    margin: auto;
-    padding: 23px 25px;
+    padding: 27px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #decdbf;
+    border: 1px solid rgba(222,205,191,.45);
     color: #decdbf;
-    background: transparent;
+    background: #090909;
     text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 4px;
-    transition: all 0.4s ease;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: .35s ease;
 }
 
 .social-link:hover {
-    background: #101010;
-    color: #decdbf;
+    background: #171411;
     border-color: #decdbf;
-    letter-spacing: 5px;
-    box-shadow: 0 0 15px rgba(222,205,191,0.08);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 .social-link .arrow {
-    font-size: 18px;
-    transition: transform 0.4s ease;
+    font-size: 17px;
+    transition: .35s ease;
 }
 
 .social-link:hover .arrow {
-    transform: translate(3px, -3px);
+    transform: translate(4px,-4px);
 }
 
-/* SPOTIFY HEADING */
+/* ==============================
+   SPOTIFY SECTION
+============================== */
+
+.spotify-section {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
 
 .spotify-heading {
     text-align: center;
-    margin: 45px 0 35px;
+    margin: 0 auto 45px;
 }
 
 .eyebrow {
     font-size: 9px;
     letter-spacing: 4px;
     color: #decdbf;
+    opacity: .8;
 }
 
 .spotify-heading h2 {
     font-family: Georgia, serif;
-    font-size: clamp(32px, 6vw, 52px);
+    font-size: clamp(38px, 7vw, 60px);
     font-weight: 400;
-    margin: 15px 0 10px;
+    margin: 18px 0 12px;
     color: #decdbf;
 }
 
 .spotify-heading p {
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
     color: #decdbf;
+    opacity: .75;
 }
 
-/* SPOTIFY PLAYER */
+/* ==============================
+   SPOTIFY PLAYER
+============================== */
 
 .spotify-frame {
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
-    padding: 13px;
-    border: 1px solid #decdbf;
-    background: #000000;
-    box-shadow: 0 15px 45px rgba(222,205,191,0.08);
-    transition: box-shadow 0.4s ease;
+    padding: 20px;
+    border: 1px solid rgba(222,205,191,.5);
+    background: #0b0b0b;
+    box-shadow: 0 15px 50px rgba(222,205,191,.05);
+    transition: .4s ease;
 }
 
 .spotify-frame:hover {
-    box-shadow: 0 15px 45px rgba(222,205,191,0.13);
+    border-color: #decdbf;
+    box-shadow: 0 15px 55px rgba(222,205,191,.1);
 }
 
 .spotify-top {
     display: flex;
     justify-content: space-between;
-    padding: 10px 5px 16px;
+    padding: 5px 3px 18px;
     font-size: 9px;
     letter-spacing: 3px;
     color: #decdbf;
@@ -223,41 +275,75 @@
     border-radius: 8px;
 }
 
-/* MOBILE */
+/* ==============================
+   MOBILE
+============================== */
 
 @media (max-width: 600px) {
 
     .social-section,
     .spotify-section {
-        padding: 35px 16px;
+        padding: 55px 17px;
+    }
+
+    .section-label {
+        margin-bottom: 35px;
+        letter-spacing: 3px;
     }
 
     .midnight-feature {
-        padding: 28px 17px;
+        padding: 38px 19px;
     }
 
     .midnight-top {
-        font-size: 8px;
-        letter-spacing: 1.5px;
+        font-size: 7px;
+        letter-spacing: 1px;
+        margin-bottom: 45px;
     }
 
-    .midnight-feature h3 {
-        font-size: 22px;
+    .midnight-feature h2 {
+        letter-spacing: 1px;
+    }
+
+    .midnight-description {
+        font-size: 11px;
+    }
+
+    .midnight-categories {
+        font-size: 8px;
+    }
+
+    .social-links-heading {
+        margin-top: 55px;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .social-link {
+        padding: 23px 20px;
     }
 
     .spotify-frame {
-        padding: 8px;
+        padding: 10px;
+    }
+
+    .spotify-section {
+        padding-top: 25px;
     }
 }
 
-/* REDUCED MOTION */
+/* ==============================
+   REDUCED MOTION
+============================== */
 
 @media (prefers-reduced-motion: reduce) {
+    .midnight-feature,
+    .midnight-button,
     .social-link,
     .social-link .arrow,
-    .spotify-frame,
-    .midnight-feature,
-    .midnight-button {
+    .spotify-frame {
         transition: none;
     }
 }
@@ -265,15 +351,18 @@
 </style>
 
 
-<!-- SOCIAL SECTION -->
+<!-- ==============================
+     SOCIAL SECTION
+============================== -->
 
 <section class="social-section">
 
     <div class="section-label">
-        ✦ FIND ME ELSEWHERE ✦
+        ✦ &nbsp; A LITTLE CORNER OF MY WORLD &nbsp; ✦
     </div>
 
-    <!-- MIDNIGHT.NEWS PREVIEW -->
+
+    <!-- MIDNIGHT NEWS -->
 
     <div class="midnight-feature">
 
@@ -308,7 +397,7 @@
             WORLD · CULTURE · LIFESTYLE · TECHNOLOGY · WATCH
         </div>
 
-        <div style="margin-top:28px;">
+        <div style="margin-top:35px;">
 
             <a
                 class="midnight-button"
@@ -328,40 +417,48 @@
 
     </div>
 
-    <!-- PINTEREST -->
 
-    <a class="social-link"
-       href="https://in.pinterest.com/dioraesthetic/_profile/"
-       target="_blank"
-       rel="noopener noreferrer">
+    <!-- SOCIAL LINKS -->
 
-        <span>PINTEREST</span>
-        <span class="arrow">↗</span>
+    <h3 class="social-links-heading">
+        Find me elsewhere.
+    </h3>
 
-    </a>
+    <div class="social-links">
 
-    <!-- TIKTOK -->
+        <a class="social-link"
+           href="https://in.pinterest.com/dioraesthetic/_profile/"
+           target="_blank"
+           rel="noopener noreferrer">
 
-    <a class="social-link"
-       href="https://www.tiktok.com/@chrisxy.xin"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="margin-top:15px;">
+            <span>PINTEREST</span>
+            <span class="arrow">↗</span>
 
-        <span>TIKTOK</span>
-        <span class="arrow">↗</span>
+        </a>
 
-    </a>
+        <a class="social-link"
+           href="https://www.tiktok.com/@chrisxy.xin"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <span>TIKTOK</span>
+            <span class="arrow">↗</span>
+
+        </a>
+
+    </div>
 
 </section>
 
 
-<!-- SPOTIFY SECTION -->
+<!-- ==============================
+     SPOTIFY SECTION
+============================== -->
 
 <section class="spotify-section">
 
     <div class="section-label">
-        ✦ A LITTLE MUSIC CORNER ✦
+        ✦ &nbsp; THE SOUNDTRACK &nbsp; ✦
     </div>
 
     <div class="spotify-heading">
@@ -372,7 +469,9 @@
 
         <h2>My Soundtrack.</h2>
 
-        <p>songs, moods & little moments.</p>
+        <p>
+            songs, moods & little moments.
+        </p>
 
     </div>
 
