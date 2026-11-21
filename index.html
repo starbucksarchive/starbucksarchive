@@ -21,6 +21,113 @@
     margin-bottom: 30px;
 }
 
+/* MIDNIGHT NEWS PREVIEW */
+
+.midnight-feature {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    padding: 35px 30px;
+    border: 1px solid #78d99a;
+    background: #101110;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.midnight-feature:hover {
+    box-shadow: 0 12px 35px rgba(120,217,154,0.10);
+    transform: translateY(-3px);
+}
+
+.midnight-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #78d99a;
+    margin-bottom: 28px;
+}
+
+.midnight-feature h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 7vw, 55px);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #78d99a;
+    margin: 0 0 12px;
+}
+
+.midnight-tagline {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+    color: #f3f2ec;
+    margin-bottom: 25px;
+}
+
+.midnight-divider {
+    height: 1px;
+    background: #78d99a;
+    opacity: 0.4;
+    margin: 22px 0;
+}
+
+.midnight-inside {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #78d99a;
+    margin-bottom: 18px;
+}
+
+.midnight-feature h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #f3f2ec;
+    margin: 0 0 14px;
+}
+
+.midnight-description {
+    max-width: 450px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: #f3f2ec;
+    opacity: 0.85;
+}
+
+.midnight-categories {
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 2;
+    color: #78d99a;
+}
+
+.midnight-button {
+    display: inline-block;
+    padding: 15px 27px;
+    border: 1px solid #78d99a;
+    color: #78d99a;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 3px;
+    transition: all 0.4s ease;
+}
+
+.midnight-button:hover {
+    background: #78d99a;
+    color: #101110;
+    letter-spacing: 4px;
+}
+
+.midnight-footer {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: #78d99a;
+    margin-top: 25px;
+}
+
 /* SOCIAL LINKS */
 
 .social-link {
@@ -115,7 +222,7 @@
     border-radius: 8px;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -124,10 +231,22 @@
         padding: 35px 16px;
     }
 
+    .midnight-feature {
+        padding: 28px 17px;
+    }
+
+    .midnight-top {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .midnight-feature h3 {
+        font-size: 22px;
+    }
+
     .spotify-frame {
         padding: 8px;
     }
-
 }
 
 /* REDUCED MOTION */
@@ -135,7 +254,9 @@
 @media (prefers-reduced-motion: reduce) {
     .social-link,
     .social-link .arrow,
-    .spotify-frame {
+    .spotify-frame,
+    .midnight-feature,
+    .midnight-button {
         transition: none;
     }
 }
@@ -143,7 +264,7 @@
 </style>
 
 
-<!-- PINTEREST & TIKTOK SECTION -->
+<!-- SOCIAL SECTION -->
 
 <section class="social-section">
 
@@ -151,7 +272,64 @@
         ✦ FIND ME ELSEWHERE ✦
     </div>
 
-    <!-- PINTEREST LINK -->
+
+    <!-- MIDNIGHT.NEWS PREVIEW -->
+
+    <div class="midnight-feature">
+
+        <div class="midnight-top">
+            <span>INDEPENDENT DIGITAL MAGAZINE</span>
+            <span>NOW LIVE ✦</span>
+        </div>
+
+        <h2>MIDNIGHT.NEWS</h2>
+
+        <div class="midnight-tagline">
+            Every hour has a story.
+        </div>
+
+        <div class="midnight-divider"></div>
+
+        <div class="midnight-inside">
+            THE WORLD, THROUGH AN EDITORIAL LENS
+        </div>
+
+        <h3>Stories worth your time.</h3>
+
+        <p class="midnight-description">
+            A considered look at the people, places,
+            ideas and moments shaping the world
+            around us.
+        </p>
+
+        <div class="midnight-divider"></div>
+
+        <div class="midnight-categories">
+            WORLD · CULTURE · LIFESTYLE · TECHNOLOGY · WATCH
+        </div>
+
+        <div style="margin-top:28px;">
+
+            <a
+                class="midnight-button"
+                href="https://starbucksarchive.github.io/MIDNIGHT.NEWS/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                EXPLORE THE PUBLICATION ↗
+
+            </a>
+
+        </div>
+
+        <div class="midnight-footer">
+            MIDNIGHT.NEWS · THE DAILY EDITION
+        </div>
+
+    </div>
+
+
+    <!-- PINTEREST -->
 
     <a class="social-link"
        href="https://in.pinterest.com/dioraesthetic/_profile/"
@@ -163,13 +341,14 @@
 
     </a>
 
-    <!-- TIKTOK LINK -->
+
+    <!-- TIKTOK -->
 
     <a class="social-link"
        href="https://www.tiktok.com/@chrisxy.xin"
        target="_blank"
        rel="noopener noreferrer"
-       style="margin-top: 15px;">
+       style="margin-top:15px;">
 
         <span>TIKTOK</span>
         <span class="arrow">↗</span>
